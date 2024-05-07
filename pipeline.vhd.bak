@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library work;
+use work.all;
+
+entity pipeline_cpu is
+	port (A1, A2, A3: in std_logic_vector(2 downto 0);
+			D1, D2: out std_logic_vector(15 downto 0);
+			D3: in std_logic_vector(15 downto 0);
+			clk, rf_write: in std_logic);
+end entity pipeline_cpu;
+
+architecture arch of pipeline_cpu is
+
+
+end arch;
