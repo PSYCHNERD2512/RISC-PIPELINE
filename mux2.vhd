@@ -1,18 +1,19 @@
-library ieee; 
-use ieee.std_logic_1164.all; 
-use ieee.numeric_std.all;
-library work;
-use work.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+LIBRARY work;
+USE work.ALL;
 
-entity mux_2 is
- port (a, b: in std_logic_vector(15 downto 0);
-       opcode: in std_logic_vector(3 downto 0);
-       o: out std_logic_vector(15 downto 0));
-end entity mux_2;
+ENTITY mux_2 IS
+      PORT (
+            a, b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+            opcode : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+            o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0));
+END ENTITY mux_2;
 
-architecture arch of mux_2 is 
- signal sel: std_logic;
-begin
- sel <= opcode(2) or (opcode(1) and opcode(0)) or (opcode(3) and opcode(1));
- o <= (sel and b) or ((not sel) and a);
-end arch;
+ARCHITECTURE arch OF mux_2 IS
+      SIGNAL sel : STD_LOGIC;
+BEGIN
+      sel <= opcode(2) OR (opcode(1) AND opcode(0)) OR (opcode(3) AND opcode(1));
+      o <= (sel AND b) OR ((NOT sel) AND a);
+END arch;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Tue May 07 18:01:36 2024
+Tue May 07 23:01:49 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue May 07 18:01:36 2024           ;
+; Analysis & Synthesis Status        ; Failed - Tue May 07 23:01:49 2024           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; DUT                                         ;
 ; Top-level Entity Name              ; DUT                                         ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 07 18:01:30 2024
+    Info: Processing started: Tue May 07 23:01:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline-cpu -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -179,13 +179,14 @@ Info (12021): Found 0 design units, including 0 entities, in source file dut.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: alu-aluArc File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/ALU.vhd Line: 15
     Info (12023): Found entity 1: alu File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/ALU.vhd Line: 5
-Error (10500): VHDL syntax error at memory.vhd(5) near text "type";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/memory.vhd Line: 5
-Info (12021): Found 0 design units, including 0 entities, in source file memory.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
+    Info (12022): Found design unit 1: InstrMemory-arch File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/memory.vhd Line: 13
+    Info (12023): Found entity 1: InstrMemory File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/memory.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file reg_file.vhd
     Info (12022): Found design unit 1: reg_file-arch File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/reg_file.vhd Line: 14
     Info (12023): Found entity 1: reg_file File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/reg_file.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline.vhd
-    Info (12022): Found design unit 1: pipeline_cpu-arch File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/pipeline.vhd Line: 15
+    Info (12022): Found design unit 1: pipeline_cpu-arch File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/pipeline.vhd Line: 17
     Info (12023): Found entity 1: pipeline_cpu File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/pipeline.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mux1.vhd
     Info (12022): Found design unit 1: mux_1-arch File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/mux1.vhd Line: 14
@@ -196,10 +197,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux2.vh
 Info (12021): Found 2 design units, including 1 entities, in source file mux3.vhd
     Info (12022): Found design unit 1: mux_3-arch File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/mux3.vhd Line: 13
     Info (12023): Found entity 1: mux_3 File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/mux3.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file sign_extender_16.vhd
+    Info (12022): Found design unit 1: SE6-bhv File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/sign_extender_16.vhd Line: 9
+    Info (12023): Found entity 1: SE6 File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/sign_extender_16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file sign_extender_16_shifter.vhd
+    Info (12022): Found design unit 1: SE6_shifter-bhv File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/sign_extender_16_shifter.vhd Line: 9
+    Info (12023): Found entity 1: SE6_shifter File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/sign_extender_16_shifter.vhd Line: 4
+Error (10500): VHDL syntax error at mux4.vhd(19) near text "or";  expecting ";" File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/mux4.vhd Line: 19
+Info (12021): Found 0 design units, including 0 entities, in source file mux4.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file data_memory.vhd
+    Info (12022): Found design unit 1: DataMemory-arch File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/data_memory.vhd Line: 16
+    Info (12023): Found entity 1: DataMemory File: C:/Users/jatin/OneDrive/Desktop/RISC-PIPELINE/data_memory.vhd Line: 10
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 4780 megabytes
-    Error: Processing ended: Tue May 07 18:01:36 2024
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:03
+    Error: Processing ended: Tue May 07 23:01:49 2024
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:12
 
 

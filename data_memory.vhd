@@ -1,17 +1,20 @@
+LIBRARY std;
+USE std.standard.ALL;
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 USE ieee.std_logic_arith.ALL;
 USE ieee.std_logic_unsigned.ALL;
 
-ENTITY InstrMemory IS
+ENTITY DataMemory IS
 	PORT (
 		clk, w_flag, r_flag : IN STD_LOGIC;
 		address, data_w : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 		data_r : OUT STD_LOGIC_VECTOR(15 DOWNTO 0));
-END InstrMemory;
+END DataMemory;
 
-ARCHITECTURE arch OF InstrMemory IS
+ARCHITECTURE arch OF DataMemory IS
 	TYPE RAM_array IS ARRAY (4095 DOWNTO 0) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
 	SIGNAL RAM : RAM_array := (
 		0 => "1001000000000001",
